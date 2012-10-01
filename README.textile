@@ -1,0 +1,6 @@
+TL;DR:
+
+* Clone into a directory.
+* Put that directory onto your PATH.
+* @vw <env>@ will now create/activate @<env>@ (they live in ~/envs).
+* @vw -w . <env>@ will set @.@ (or some other directory) as the "workdir" for @env@. You will automatically be cd'd into there when activating the virtualenv with @vw@.
