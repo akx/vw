@@ -1,3 +1,5 @@
+# -- encoding: utf-8 --
+from __future__ import with_statement
 import argparse
 import os
 import sys
@@ -10,7 +12,7 @@ def gen_activation_script(env_path):
     activation_script.append("call \"%s\"" % os.path.join(env_path, "Scripts", "activate.bat"))
     workdir_file = os.path.join(env_path, "workdir")
     if os.path.isfile(workdir_file):
-        activation_script.append("cd \"%s\"" % file(workdir_file, "rb").read())
+        activation_script.append("cd /d \"%s\"" % file(workdir_file, "rb").read())
     return "\n".join(activation_script)
 
 def main():
